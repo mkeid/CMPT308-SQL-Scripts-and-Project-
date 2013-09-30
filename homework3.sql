@@ -76,7 +76,9 @@ WHERE products.quantity =
 (SELECT MIN(quantity)
 FROM products);
 
--- 10
+-- 10 (Asks to get the name and city of customers where the most number of products are made. 
+-- However there can only be one city where the most number of products are made. I'm a bit
+-- confused on what is being asked here.)
 SELECT customers.name, customers.city
 FROM customers
 INNER JOIN products
@@ -85,7 +87,7 @@ WHERE products.quantity IN
 (SELECT MAX(quantity)
 FROM products);
 
--- 11
+-- 11 (Same situation here except it is using the word ány'.)
 SELECT customers.name, customers.city
 FROM customers
 INNER JOIN products
